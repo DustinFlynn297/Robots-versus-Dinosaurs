@@ -13,5 +13,5 @@ class Weapon:
         print(f'Weapon: {self.weapon_name}')
     
     def attack_power (self):
-        self.weapon_attack_power = random.choice(range(25, 35))
+        self.weapon_attack_power = random.randrange(25, 35, 5)
         print(f'Weapon attack power: {self.weapon_attack_power}')

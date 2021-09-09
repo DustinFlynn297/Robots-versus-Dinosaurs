@@ -8,10 +8,12 @@ class Robot:
         self.robot_name = ''
         self.robot_health = 0
         self.robot_power_level = 0
-        self.robot_weapon = Weapon()
         self.robot_name_selection()
         self.robot_health_selection()
         self.robot_power_level_selection()
+        self.robot_weapon = Weapon()
+        
+
 
     def robot_name_selection (self):
         names = ["Paul", "Tristan", "Jocham", "Azrael", "Asmodeus", "Thor", "Jakobi"]
@@ -19,12 +21,12 @@ class Robot:
         print(f'Robot name: {self.robot_name}')
 
     def robot_health_selection (self):
-        self.robot_health = random.choice(range(200,250))
-        print(f"{self.robot_name}'s health: {self.robot_health}" )
+        self.robot_health = random.randrange(200, 250, 10)
+        print(f"{self.robot_name} the robot's health: {self.robot_health}" )
 
     def robot_power_level_selection (self):
-        self.robot_power_level = random.choice(range(100,125))
-        print(f"{self.robot_name}'s power level: {self.robot_power_level}" )
+        self.robot_power_level = random.randrange(100, 130, 10)
+        print(f"{self.robot_name} the robot's power level: {self.robot_power_level}" )
 
-mike = Robot()
-steve = Robot
+    def attack(self, dinosaur):
+        pass
