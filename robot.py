@@ -12,6 +12,7 @@ class Robot:
         self.robot_health_selection()
         self.robot_power_level_selection()
         self.robot_weapon = Weapon()
+        self.robot_attack()
         
 
 
@@ -28,5 +29,5 @@ class Robot:
         self.robot_power_level = random.randrange(100, 130, 10)
         # print(f"{self.robot_name} the robot's power level: {self.robot_power_level}" )
 
-    def attack(self, dinosaur):
-        dinosaur.dinosaur_health - self.weapon_attack_power
+    def robot_attack(self, dinosaur):
+        dinosaur.dinosaur_health -= self.weapon_attack_power

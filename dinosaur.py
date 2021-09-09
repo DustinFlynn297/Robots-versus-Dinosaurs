@@ -10,6 +10,7 @@ class Dinosaur:
         self.dinosaur_health_generator()
         self.dinsoaur_attack_power_generator()        
         self.dinosaur_energy_generator()
+        self.dinosaur_attack()
 
     def dinosaur_name_selection(self):
         names = ["Big T", "Shredder", "Long Boi", "Ihaswings", "Tri-top", "Cloaked", "Spitter"]
@@ -31,6 +32,3 @@ class Dinosaur:
 
     def dinosaur_attack (self, robot):
         robot.health -= self.dinsoaur_attack_power
-
-mike = Dinosaur()
-print(mike)

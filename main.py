@@ -1,3 +1,3 @@
-from battlefield import Battlefield
+# from battlefield import Battlefield
 
-Battlefield.run_game()
+# battle_field = Battlefield()

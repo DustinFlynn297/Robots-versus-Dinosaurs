@@ -31,7 +31,9 @@ class Battlefield:
         robot.robot_attack
     
     def show_dino_opponent(self):
-        return self.fleet[0]
+        for i in self.fleet:
+            return self.fleet[i]
 
     def show_robot_opponent(self):
-        return self.herd[0]
+        for i in self.herd:
+            return self.herd[i]
