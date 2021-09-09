@@ -5,9 +5,10 @@ import random
 
 class Robot:
     def __init__ (self):
-        self.robot_name = ''
-        self.robot_health = 0
+        self.name = ''
+        self.health = 0
         self.robot_power_level = 0
+        self.alive = True
         self.robot_name_selection()
         self.robot_health_selection()
         self.robot_power_level_selection()
@@ -22,7 +23,7 @@ class Robot:
         # print(f'Robot name: {self.robot_name}')
 
     def robot_health_selection (self):
-        self.robot_health = random.randrange(200, 250, 10)
+        self.health = random.randrange(200, 250, 10)
         # print(f"{self.robot_name} the robot's health: {self.robot_health}" )
 
     def robot_power_level_selection (self):
@@ -30,4 +31,7 @@ class Robot:
         # print(f"{self.robot_name} the robot's power level: {self.robot_power_level}" )
 
     def robot_attack(self, dinosaur):
-        dinosaur.dinosaur_health -= self.weapon_attack_power
+        dinosaur.health -= self.weapon_attack_power
+        print(f"{dinosaur.name} has {dinosaur.health} health left")
+        if dinosaur.health <= 0:
+            dinosaur.alive = False
