@@ -1,6 +1,3 @@
-from robot import Robot
+from battlefield import Battlefield
 
-
-mike = Robot()
-
-mike.robot_name_selection()
+Battlefield.run_game()

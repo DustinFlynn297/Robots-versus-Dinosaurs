@@ -16,17 +16,17 @@ class Robot:
 
 
     def robot_name_selection (self):
-        names = ["Paul", "Tristan", "Jocham", "Azrael", "Asmodeus", "Thor", "Jakobi"]
+        names = ["Paul", "Tristan", "Jocham", "Azrael", "Asmodeus", "Thor", "Jakobi", "Hank", "Bob", "Sarah", "Ann", "Joyce", "Kate", "Lauren"]
         self.robot_name = random.choice(names)
-        print(f'Robot name: {self.robot_name}')
+        # print(f'Robot name: {self.robot_name}')
 
     def robot_health_selection (self):
         self.robot_health = random.randrange(200, 250, 10)
-        print(f"{self.robot_name} the robot's health: {self.robot_health}" )
+        # print(f"{self.robot_name} the robot's health: {self.robot_health}" )
 
     def robot_power_level_selection (self):
         self.robot_power_level = random.randrange(100, 130, 10)
-        print(f"{self.robot_name} the robot's power level: {self.robot_power_level}" )
+        # print(f"{self.robot_name} the robot's power level: {self.robot_power_level}" )
 
     def attack(self, dinosaur):
-        pass
+        dinosaur.dinosaur_health - self.weapon_attack_power
